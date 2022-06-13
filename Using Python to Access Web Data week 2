@@ -1,0 +1,31 @@
+
+nam= "porsia.txt"
+
+lis= []
+d11= open(nam,"r")
+
+       
+while 1:
+       line= d11.readline()
+       if line == "":
+            break
+       vv1= re.findall("[0-9]+",line)
+       if not vv1 == []:
+                        print(vv1)
+                        lis.append(vv1)
+
+
+d11.close()
+print(lis)
+ss1=0
+li=[]
+size=len(lis)
+
+for i in range(size):
+    for j in lis[i]:
+        #print(j)
+        jj= int(j)
+        li.append(jj)
+
+ss1= sum(li)
+print(ss1)
